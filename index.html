@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="style.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <title>Equations Solver</title>
+</head>
+
+<body>
+    <script src="script.js"></script>
+    <div id="app" class="container">
+        <div id="title">
+            <h1>Methods Calculator</h1>
+        </div>
+        <div id="head">
+            <label for="size">Enter your Equations size:</label>
+            <input type="text" id="size" name="size">
+        </div>
+        <div id="input">
+            <label for="eqauation">Enter your Equations:</label>
+            <textarea id="inputEquation" rows="2" cols="30" name="equation"></textarea>
+            <select name="methods" id="methods">
+            <option value="Gauss Elimination">Gauss Elimination</option>
+            <option value="Gauss Elimination using pivoting.">Gauss Elimination using pivoting</option>
+            <option value="Gauss Jordan">Gauss Jordan</option>
+            <option value="Downlittle Form">Downlittle Form</option>
+            <option value="Cholesky Form">Cholesky Form</option>
+            <option value="Crout Form">Crout Form</option>
+            <option value="Gauss Seidil">Gauss Seidil</option>
+            <option value="Jacobi Iteration">Jacobi Iteration</option>
+            </select>
+        </div>
+        <div id="readFile">
+            <label for="inputfile">Choose your file here:</label>
+            <input type="file" name="inputfile" id="inputfile" onchange="handlefile()">
+
+        </div>
+        <div id="extra">
+            <label for="menu">Enter your Stop condition if needed:</label>
+            <select name="menu" id="extraMenu">
+            <option value="Number of Iteration">Number of Iteration</option>
+            <option value="Absolute Relative Error">Absolute Relative Error</option>
+          </select>
+            <input type="text" id="inputCondition" name="menu">
+            <div id="textintial">
+                <label for="intial">Enter Intial values:</label>
+                <textarea id="intailInput" rows="1" cols="30" name="intial"></textarea>
+            </div>
+        </div>
+        <div>
+            <button id="solvebtn" onclick="handleSolveClicked()">Slove</button>
+        </div>
+        <div id="result">
+            <label for="result" style="font-size: xx-large;">Result</label>
+        </div>
+        <div id="results">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
